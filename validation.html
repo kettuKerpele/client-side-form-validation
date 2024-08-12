@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="validator_styles.css">
+<title>Form validation example</title>
+</head>
+<body>
+<style>
+  textarea{ vertical-align: top; }  
+</style>
+
+<div class="container">
+ <h1 style="font-family:verdana; font-size:25px;">Rekisteröitymislomake</h1><br>
+  <form name="testForm" onsubmit="return validateForm()">
+   <label for="userId">Käyttäjä ID:</label>
+   <input type="text" id="userId" name="userId" size="6"><br><br>
+   <label for="passw">Salasana:</label>
+   <input type="text" id="passw" name="passw" size="6"><br><br>
+   <label for="fnameLname">Nimi:</label>
+   <input type="text" id="fnameLname" name="fnameLname"><br><br>
+   <label for="address">Osoite:</label>
+   <input type="text" id="address" name="address"></input><br><br>
+  
+   <label for="country">Maa:</label>
+   <select id="country" name="country">
+   <option value="" selected disabled>Valitse maa</option>
+   <option value="Finland">Suomi</option>
+   <option value="Sweden">Ruotsi</option>
+   <option value="Norway">Norja</option>
+   </select><br><br>
+
+   <label for="postNum">Postinro:</label>
+   <input type="text" id="postNum" name="postNum" size="6"></input><br><br>
+   <label for="mail">Sähköposti:</label>
+   <input type="text" id="mail" name="mail"></input><br><br>
+  
+   <label for="male">Sukupuoli:</label>
+   <input type="radio" id="male" name="gender" value="male">Mies</input>
+   <input type="radio" id="female" name="gender" value="female">Nainen</input><br><br>
+
+   <label for="extra">Lisätietoja:</label>
+   <textarea id="extra" name="msg" rows="10" cols="25"></textarea><br><br>  
+  </form> 
+ <button type="submit" onclick="validateForm()">Lähetä</button>
+<p id="note"></p>
+<p style="color:darkred" id="warnings1"></p>
+<p style="color:darkred" id="warnings2"></p>
+<p style="color:darkred" id="warnings3"></p>
+<p style="color:darkred" id="warnings4"></p>
+<p style="color:darkred" id="warnings5"></p>
+<p style="color:darkred" id="warnings6"></p>
+<p style="color:darkred" id="warnings7"></p>
+<p style="color:darkred" id="warnings8"></p>
+</div>
+
+<script src="validator_js.js"></script>
+   
+</body>
+</html>
